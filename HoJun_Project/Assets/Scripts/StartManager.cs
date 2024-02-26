@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartManager : MonoBehaviour
@@ -10,7 +9,7 @@ public class StartManager : MonoBehaviour
 
     private void Awake()
     {
-        OnOffBtn.onClick.AddListener(OnClickOnOffButton);
+        OnOffBtn.onClick.AddListener(OnClickStartBtn);
     }
 
     private void OnClickOnOffButton()
@@ -25,5 +24,11 @@ public class StartManager : MonoBehaviour
             // LockImg가 꺼져있다면
             LockImg.gameObject.SetActive(true);
         }
+    }
+
+
+    private void OnClickStartBtn()
+    {
+        SceneManager.LoadScene("02_Main");
     }
 }
