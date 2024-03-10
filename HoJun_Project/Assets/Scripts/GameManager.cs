@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _MoneyTxt;
     [SerializeField] private TextMeshProUGUI _DiamondTxt;
 
+    [Header("인벤토리")]
+    [SerializeField] private GameObject _InventoryObj;
+    [SerializeField] private Button _InventoryBtn;
+
     [Header("테스트(0-Hp, 1-돈, 2-다이아)")]
     [SerializeField] private int _TestType;
     [SerializeField] private Button _TestIncreaseBtn;
@@ -32,6 +36,11 @@ public class GameManager : MonoBehaviour
         // 3.돈, 다이아의 갯수 txt를 초기화합니다.
         _MoneyTxt.text = $"x {_MoneyCount}";
         _DiamondTxt.text = $"x {_DiamondCount}";
+
+        _InventoryBtn.onClick.AddListener(() =>
+        {
+            _InventoryObj.SetActive(true);
+        });
 
         // 테스트 버튼 기능연결
         _TestIncreaseBtn.onClick.AddListener(OnClickIncreaseBtn);
