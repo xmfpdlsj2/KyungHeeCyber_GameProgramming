@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 993
     height: 1085
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 150}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 25
+  controlID: 17
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,9 +196,9 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 14}
   - {fileID: 13}
-  m_Selected: 1
+  - {fileID: 14}
+  m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 230
     height: 1035
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -428,7 +428,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: -111, y: 26}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
@@ -643,9 +643,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.5522265, y: 9.246082, z: -11.594391}
+    m_Target: {x: -13.758232, y: 8.240084, z: 3.2042074}
     speed: 2
-    m_Value: {x: 6.5522265, y: 9.246082, z: -11.594391}
+    m_Value: {x: -13.758232, y: 8.240084, z: 3.2042074}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -691,13 +691,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.29352802, y: 0.2668203, z: -0.085746326, w: -0.9138276}
+    m_Target: {x: 0.02051397, y: 0.95427924, z: -0.29049465, w: 0.06738856}
     speed: 2
-    m_Value: {x: -0.2934306, y: 0.26821956, z: -0.08619578, w: -0.9135245}
+    m_Value: {x: 0.020078227, y: 0.9543802, z: -0.2905254, w: 0.06595713}
   m_Size:
-    m_Target: 4.193094
+    m_Target: 2.3992574
     speed: 2
-    m_Value: 4.193094
+    m_Value: 2.3992574
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -899,7 +899,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -907,15 +907,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Github_HoJun\KyungHeeCyber_GameProgramming\HoJun_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a5c0000
-    m_LastClickedID: 23690
+    m_SelectedIDs: 945c0000
+    m_LastClickedID: 23700
     m_ExpandedIDs: 00000000065c0000085c00000a5c00000c5c00000e5c0000105c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000805a0000005a0000ae590000bc5900000000000044900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1037,8 +1037,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a5a0000
-      m_LastClickedID: 23162
+      m_SelectedIDs: 1af2ffff
+      m_LastClickedID: -3558
       m_ExpandedIDs: 2cfbffff3a5a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
