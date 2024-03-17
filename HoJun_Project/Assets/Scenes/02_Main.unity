@@ -1182,7 +1182,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &655960130
 MonoBehaviour:
@@ -1198,6 +1198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MoveSpeed: 10
   _RotateSpeed: 75
+  _Rb: {fileID: 655960129}
 --- !u!1 &671483078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2821,6 +2822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333223889}
+  - component: {fileID: 1333223890}
   - component: {fileID: 1333223888}
   - component: {fileID: 1333223887}
   m_Layer: 0
@@ -2904,6 +2906,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333223890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333223886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37be24c67798b2f4fb95f8acd3a74f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CameraPos: {x: 0, y: 1.2, z: -3}
+  _Player: {fileID: 655960128}
 --- !u!1 &1356009991
 GameObject:
   m_ObjectHideFlags: 0
