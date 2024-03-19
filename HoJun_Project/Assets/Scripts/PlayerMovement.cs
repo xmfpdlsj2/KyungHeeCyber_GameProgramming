@@ -21,12 +21,13 @@ public class PlayerMovement : MonoBehaviour
         this.transform.Rotate(Vector3.up * _HInput * Time.deltaTime);
     }
 
-    //private void FixedUpdate()
-    //{
-    //    var rot = Vector3.up * _HInput;
-    //    var angleRot = Quaternion.Euler(rot * Time.fixedDeltaTime);
-    //    _Rb.MovePosition(this.transform.position +
-    //        this.transform.forward * _VInput * Time.fixedDeltaTime);
-    //    _Rb.MoveRotation(_Rb.rotation * angleRot);
-    //}
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void Jump()
+    {
+
+    }
 }
