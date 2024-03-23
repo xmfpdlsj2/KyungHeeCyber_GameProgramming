@@ -1226,8 +1226,9 @@ MonoBehaviour:
   _Rb: {fileID: 655960129}
   _LayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  _CapCol: {fileID: 0}
+    m_Bits: 64
+  _CapCol: {fileID: 655960125}
+  _BulletPrefab: {fileID: 5667384533431788493, guid: 951560b34186a2f4f96b9dbdebbfb37d, type: 3}
 --- !u!1 &671483078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37be24c67798b2f4fb95f8acd3a74f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CameraPos: {x: 0, y: 1.2, z: -3}
+  _CameraPos: {x: 0, y: 2, z: -3}
   _Player: {fileID: 655960128}
 --- !u!1 &1356009991
 GameObject:
@@ -3520,6 +3521,7 @@ GameObject:
   - component: {fileID: 1725784109}
   - component: {fileID: 1725784108}
   - component: {fileID: 1725784107}
+  - component: {fileID: 1725784112}
   m_Layer: 0
   m_Name: Item_Hp
   m_TagString: Untagged
@@ -3628,6 +3630,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451a435905d015f458e759a19d233cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1725784112
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725784106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65dabbc1c48b816478f392e085d5a0e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1732051980
 GameObject:
   m_ObjectHideFlags: 0

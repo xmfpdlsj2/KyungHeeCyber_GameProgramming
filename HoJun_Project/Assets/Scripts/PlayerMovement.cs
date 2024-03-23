@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("이동 관련")]
     [SerializeField] private float _MoveSpeed = 10F;
     [SerializeField] private float _RotateSpeed = 75F;
 
     [SerializeField] private Rigidbody _Rb;
 
+    [Header("점프 관련")]
     [SerializeField] private LayerMask _LayerMask;
     [SerializeField] private CapsuleCollider _CapCol;
+
+    [Header("발사체 관련")]
+    [SerializeField] private GameObject _BulletPrefab;
 
     // 이동
     private float _VInput;
@@ -20,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private float _JumpVelocity = 5F;
     private bool _IsJump = false;
     private float _DistanceToGround = 0.1f;
+
+    // 발사체
+    private float _BulletSpeed = 100F;
+    private bool _IsShoot = false;
+
 
     private void Update()
     {
@@ -32,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
 
         // 점프
         _IsJump |= Input.GetKeyDown(KeyCode.Space);
+
+        // 발사체
+        _IsShoot |= Input.GetKeyDown(KeyCode.F);
     }
 
     private void FixedUpdate()
@@ -41,7 +54,18 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        if (_IsShoot)
+        {
+            GameObject newBullet = Instantiate(_BulletPrefab,
+                this.transform.position + new Vector3(0F, 0F, 1F),
+                this.transform.rotation);
+
+            Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
+            bulletRb.velocity = this.transform.forward * _BulletSpeed;
+        }
+
         _IsJump = false;
+        _IsShoot = false;
     }
 
     private void Jump()
