@@ -1,9 +1,13 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("카메라")]
+    [SerializeField] private Transform _MainCamera;
+
     [Header("이동 관련")]
     [SerializeField] private float _MoveSpeed = 10F;
     [SerializeField] private float _RotateSpeed = 75F;
@@ -83,5 +87,14 @@ public class PlayerMovement : MonoBehaviour
             QueryTriggerInteraction.Ignore);
 
         return isGround;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Enemy")
+        {
+            Debug.Log("Damge by Enemy!");
+            _MainCamera.DOShakeRotation(0.5F, 10F);
+        }
     }
 }
