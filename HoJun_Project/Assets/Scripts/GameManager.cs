@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _InventoryObj;
     [SerializeField] private Button _InventoryBtn;
 
+    [Header("Enmey")]
+    [SerializeField] private GameObject _Enemy;
+    [SerializeField] private Transform _EnemyRespawnPos;
+
     [Header("테스트(0-Hp, 1-돈, 2-다이아)")]
     [SerializeField] private int _TestType;
     [SerializeField] private Button _TestIncreaseBtn;
@@ -46,13 +50,19 @@ public class GameManager : MonoBehaviour
         _TestIncreaseBtn.onClick.AddListener(OnClickIncreaseBtn);
         _TestDecreaseBtn.onClick.AddListener(OnClickDecreaseBtn);
     }
-
-
-    private void Start()
+   
+    public void EnemyDown()
     {
-
+        _Enemy.SetActive(false);
+        _Enemy.transform.localPosition = _EnemyRespawnPos.localPosition;
+        StartCoroutine(EnemyRespawn());
     }
 
+    private IEnumerator EnemyRespawn()
+    {
+        yield return new WaitForSeconds(3F);
+        _Enemy.SetActive(true);
+    }
 
     private void OnClickIncreaseBtn()
     {
@@ -111,5 +121,4 @@ public class GameManager : MonoBehaviour
             _DiamondTxt.text = $"x {_DiamondCount}";
         }
     }
-
 }
