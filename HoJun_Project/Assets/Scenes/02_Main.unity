@@ -2743,6 +2743,8 @@ MonoBehaviour:
   _DiamondTxt: {fileID: 900589056}
   _InventoryObj: {fileID: 893985479}
   _InventoryBtn: {fileID: 1685689490}
+  _Enemy: {fileID: 1136796414}
+  _EnemyRespawnPos: {fileID: 223221548}
   _TestType: 0
   _TestIncreaseBtn: {fileID: 46414206}
   _TestDecreaseBtn: {fileID: 2078822414}
@@ -3239,6 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312133a426c94db41aa815642c22262a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _GameManager: {fileID: 1001774844}
   _MainChar: {fileID: 655960128}
   _NavAgent: {fileID: 1136796419}
   _PatrolPos:
@@ -3246,7 +3249,6 @@ MonoBehaviour:
   - {fileID: 54873973}
   - {fileID: 1338726841}
   - {fileID: 346883350}
-  _RespawnPos: {fileID: 223221548}
 --- !u!135 &1136796421
 SphereCollider:
   m_ObjectHideFlags: 0
