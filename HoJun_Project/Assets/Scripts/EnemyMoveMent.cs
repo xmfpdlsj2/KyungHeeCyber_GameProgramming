@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 
 public class EnemyMoveMent : MonoBehaviour
 {
     [SerializeField] private GameManager _GameManager;
+    
+    [Header("UI")]
+    [SerializeField] private Transform _MainCam;
+    [SerializeField] private Transform _Canvas;
+    [SerializeField] private Image _HpBar;
 
     [Header("내비게이션")]
     [SerializeField] private Transform _MainChar;
@@ -14,7 +20,9 @@ public class EnemyMoveMent : MonoBehaviour
 
     [Header("패트롤")]
     [SerializeField] private Transform[] _PatrolPos;
-    
+
+    private const int MAX_HP = 3;
+
     private int _PatrolIndex = 0;
     private int _Hp = 3;
 
@@ -29,6 +37,8 @@ public class EnemyMoveMent : MonoBehaviour
             _NavAgent.speed = _DefaultSpeed;
             MoveToNextPatrolPos();
         }
+
+        _Canvas.forward = _MainCam.forward;   // 카메라가 바라보는 방향대로 보도록
     }
 
     private void MoveToNextPatrolPos()
@@ -70,9 +80,12 @@ public class EnemyMoveMent : MonoBehaviour
         if (collision.gameObject.name == "Bullet(Clone)")
         {
             _Hp--;
+            _HpBar.fillAmount = (float)_Hp / MAX_HP;
             if (_Hp <= 0 )
             {
                 _GameManager.EnemyDown();
+                _Hp = MAX_HP;
+                _HpBar.fillAmount = 1;
                 return;
             }
 
