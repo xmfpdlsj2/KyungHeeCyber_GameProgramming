@@ -23,6 +23,7 @@ public class IntroManager : MonoBehaviour
     // Start 버튼 클릭시 호출
     private void OnClickStartBtn()
     {
+        _FadeInImg.color = Color.clear;
         _FadeInImg.gameObject.SetActive(true);
         _FadeInImg.DOFade(1F, 1F).OnComplete(() => StartLoading());
     }
