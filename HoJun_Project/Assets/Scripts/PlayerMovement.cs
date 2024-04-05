@@ -95,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Damge by Enemy!");
             _MainCamera.DOShakeRotation(0.5F, 10F);
+            GameManager.Instance.DecreaseHudValue(0);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Basic_CSharp : MonoBehaviour
 {
+    public static int BCInjt;
 
     private void Start()
     {

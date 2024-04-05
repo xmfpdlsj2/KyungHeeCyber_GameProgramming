@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class EnemyMoveMent : MonoBehaviour
 {
-    [SerializeField] private GameManager _GameManager;
-    
     [Header("UI")]
     [SerializeField] private Transform _MainCam;
     [SerializeField] private Transform _Canvas;
@@ -83,7 +81,7 @@ public class EnemyMoveMent : MonoBehaviour
             _HpBar.fillAmount = (float)_Hp / MAX_HP;
             if (_Hp <= 0 )
             {
-                _GameManager.EnemyDown();
+                GameManager.Instance.EnemyDown();
                 _Hp = MAX_HP;
                 _HpBar.fillAmount = 1;
                 return;

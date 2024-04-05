@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 289733530}
   - component: {fileID: 289733529}
-  - component: {fileID: 289733531}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -153,6 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6efee33dcda6e4dbc91eaf18045aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _HpImgs: []
+  _MoneyTxt: {fileID: 0}
+  _DiamondTxt: {fileID: 0}
+  _InventoryObj: {fileID: 0}
+  _InventoryBtn: {fileID: 0}
+  _Enemy: {fileID: 0}
+  _EnemyRespawnPos: {fileID: 0}
+  _TestType: 0
+  _TestIncreaseBtn: {fileID: 0}
+  _TestDecreaseBtn: {fileID: 0}
 --- !u!4 &289733530
 Transform:
   m_ObjectHideFlags: 0
@@ -168,18 +177,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &289733531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289733528}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf99e4d3aa788344a0368fe77d0bcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,11 +24,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button _TestIncreaseBtn;
     [SerializeField] private Button _TestDecreaseBtn;
 
+    public static GameManager Instance { get; private set; }
+
     private int _MoneyCount = 10000;
     private int _DiamondCount = 100;
 
     private void Awake()
     {
+        // 싱글톤 패턴
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
         // 1.먼저 모든 Hp 이미지들을 꺼줍니다.
         Array.ForEach(_HpImgs, img => img.SetActive(false));
 
@@ -46,9 +54,9 @@ public class GameManager : MonoBehaviour
             _InventoryObj.SetActive(true);
         });
 
-        // 테스트 버튼 기능연결
-        _TestIncreaseBtn.onClick.AddListener(OnClickIncreaseBtn);
-        _TestDecreaseBtn.onClick.AddListener(OnClickDecreaseBtn);
+        //// 테스트 버튼 기능연결
+        //_TestIncreaseBtn.onClick.AddListener(OnClickIncreaseBtn);
+        //_TestDecreaseBtn.onClick.AddListener(OnClickDecreaseBtn);
     }
    
     public void EnemyDown()
@@ -89,9 +97,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnClickDecreaseBtn()
+    public void DecreaseHudValue(int type)
     {
-        if (_TestType == 0) // Hp 감소
+        if (type == 0) // Hp 감소
         {
             for (int i = (_HpImgs.Length - 1); i >= 0; i--)
             {
@@ -102,7 +110,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        else if (_TestType == 1) // 돈 감소
+        else if (type == 1) // 돈 감소
         {
             _MoneyCount -= 200;
             if (_MoneyCount <= 0)
