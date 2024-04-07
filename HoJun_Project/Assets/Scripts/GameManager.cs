@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,26 @@ public class GameManager : MonoBehaviour
     private int _MoneyCount = 10000;
     private int _DiamondCount = 100;
 
+    private int _PlayerHp = 0;
+    public int PlayerHp 
+    { 
+        get
+        {
+            return _PlayerHp; 
+        }
+
+        set
+        {
+            if (value < 0)
+            {
+                Debug.Log($"#### hp는 0이하로 내려갈수 없습니다.[{value}]");
+                return; 
+            }
+
+            _PlayerHp = value;
+        }
+    }
+
     private void Awake()
     {
         // 싱글톤 패턴
@@ -53,6 +74,8 @@ public class GameManager : MonoBehaviour
         {
             _InventoryObj.SetActive(true);
         });
+
+        PlayerHp = 3;
 
         //// 테스트 버튼 기능연결
         //_TestIncreaseBtn.onClick.AddListener(OnClickIncreaseBtn);

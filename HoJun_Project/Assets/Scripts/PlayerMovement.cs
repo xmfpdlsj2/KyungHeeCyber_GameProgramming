@@ -66,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
 
             Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
             bulletRb.velocity = this.transform.forward * _BulletSpeed;
+
+            Bullet.BulletCount();
         }
 
         _IsJump = false;
@@ -95,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Damge by Enemy!");
             _MainCamera.DOShakeRotation(0.5F, 10F);
+
+            GameManager.Instance.PlayerHp--;
             GameManager.Instance.DecreaseHudValue(0);
         }
     }
