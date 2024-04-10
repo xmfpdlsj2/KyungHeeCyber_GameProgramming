@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
 
     public static void BulletCount()
     {
-        LocalCount = 2147;
         TotalCount++;
     }
 }
