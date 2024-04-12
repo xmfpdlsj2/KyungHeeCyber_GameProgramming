@@ -4,15 +4,15 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Linq;
 
 public class IntroManager : MonoBehaviour
 {
     [SerializeField] private Button _StartBtn;
-    [SerializeField] private Image _FadeInImg;
+    [SerializeField] private UnityEngine.UI.Image _FadeInImg;
 
     [SerializeField] private GameObject _LoadingBarObj;
-    [SerializeField] private Image _FillImg;
+    [SerializeField] private UnityEngine.UI.Image _FillImg;
+    
 
     private void Awake()
     {
