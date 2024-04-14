@@ -42,7 +42,6 @@ public class IntroManager : MonoBehaviour
     // ¸ÞÀÎ¾À ·Îµå
     private void LoadMainScene()
     {
-        //SceneManager.LoadScene("02_Main");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("02_Main");
     }
 }
