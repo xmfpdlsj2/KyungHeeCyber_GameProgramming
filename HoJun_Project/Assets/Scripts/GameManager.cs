@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         _InventoryBtn.onClick.AddListener(() =>
         {
             _InventoryObj.SetActive(true);
+            SoundManager.Instance.PlayOneShop();
         });
 
         PlayerHp = 3;
