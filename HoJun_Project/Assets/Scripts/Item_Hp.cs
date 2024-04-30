@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item_Hp : MonoBehaviour
 {
+    // 충돌 예시
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "MainChar")
