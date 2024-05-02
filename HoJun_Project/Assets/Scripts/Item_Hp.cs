@@ -15,7 +15,7 @@ public class Item_Hp : MonoBehaviour
         Debug.Log("#### OnCollisionEnter");
     }
 
-
+    // 트리거 예시
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "MainChar")
